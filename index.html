@@ -1,43 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untuk Winda</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-   
-  
+<style>
+    body {
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+  font-family: 'Indie Flower', cursive !important;
+  background: #FDE3A7; /*CAPE HONEY*/
+  margin: 0px;
+  padding: 0px;
+}
+
+::selection {
+  background: transparent;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 1px;
+  font-family: 'Amatic SC', cursive !important;
+}
+
+.color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
+.color2{color:#FD2D00/*Hashed Browns*/}
+
+.margin {
+  margin-bottom: 30px;
+}
+
+.card {
+  color: #013243; /*SHERPA BLUE*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+  box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.card:before {
+  content:'';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #BAC1BA;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #92A29C;
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: .7s;
+}
+
+.card .bark {
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .7s;
+}
+
+.card .imgBox img {
+  min-width: 250px;
+  max-height: 400px;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+  opacity: 1;
+  transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 70px;
+}
+
+.card .details p {
+  font-size: 15px;
+  line-height: 5px;
+  transform: rotate(-10deg);
+  padding: 0 0 0 20px;
+}
+
+</style>
 <body>
+    <div class="card">
+        <div class="imgBox">
+          <div class="bark"></div>
+          <img id="first" src="https://media.istockphoto.com/vectors/happy-teachers-day-poster-vector-id858777642?k=20&m=858777642&s=612x612&w=0&h=ioDUOmE-cd3-_2NwgQkLhocfOsDcjTq1twXYUivzD7U=">
+        </div>
+        <div class="details">
+          <h4 class="color1">Selamat Hari Guru</h2>
+          <h4 class="color2 margin">Sayangku Winda Annisa❤</h3>
+          
+          <p>Selamat Hari Guru untuk Sayangku</p>
+          <p>yang InsyaAllah selalu menginspirasi, bersabar</p>
+          <p>& menjadi cahaya di setiap langkahku.</p>
 
-    <div id="balloon-container"></div>
-    <div id="love-message-container"></div>
-<!-- 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bS9eXS6VucU?autoplay=1"
-    allow="autoplay" frameborder="0" allowfullscreen></iframe> -->
-            </script>
-            <script>
-                window.onload = function () {
-                        var url = 'https://hadidharmwan.github.io/1.mp3';
-                        window.AudioContext = window.AudioContext || window.webkitAudioContext; //fix up prefixing
-                        var context = new AudioContext(); //context
-                        var source = context.createBufferSource(); //source node
-                        source.connect(context.destination); //connect source to speakers so we can hear it
-                        var request = new XMLHttpRequest();
-                        request.open('GET', url, true);
-                        request.responseType = 'arraybuffer'; //the  response is an array of bits
-                        request.onload = function () {
-                            context.decodeAudioData(request.response, function (response) {
-                                source.buffer = response;
-                                source.start(0); //play audio immediately
-                                source.loop = true;
-                            }, function () { console.error('The request failed.'); });
-                        }
-                        request.send();
-                    }
-            </script>
-<script src="script.js"></script>
+          <p>Seperti seorang guru,</p>
+          <p>kehadiranmu mengajarkan banyak hal</p>
+          <p>tentang perjuangan, kebaikan, dan cinta.</p>
+          <p class="text-right">Terima kasih telah hadir dalam hidupku.❤️</p>
+          <p>Semoga doa kita</p>
+          <p>tujuan kita diijabah Allah SWT.</p>
+
+          <p>Aamiiin Allahumma Aamiin</p>
+          <p class="text-right">I LOVE YOU❤️❤️❤️</p>
+        </div>
+      </div>
+    
+    
 </body>
-
 </html>
